@@ -1,0 +1,39 @@
+#see packages
+	pip list
+#see local packages only
+	pip list --local
+1)
+#create blank venv
+	python -m venv my_project\venv
+#create venv with all system packages
+	python -m venv my_project\venv --system-site-packages
+2)
+#activate venv
+	my_project\venv\Scripts\activate.bat
+#deactivate venv
+	deactivate
+
+
+#remove venv. '/s' is to ensure it removes all subdirectories
+	rmdir venv /s
+
+
+#save packages into my_project
+	(activate venv)
+	pip freeze
+	action: copy and past into a new requirements.txt file
+#install requirements
+	(activate virtual env first)
+	pip install -r requirements.txt		#'-r' expects a requirements.txt file
+
+#find where the venv is
+	(activate vevn)
+	where python
+
+#useful windows cmd commands
+	dir
+	mkdir
+	rmdir
+	cls
+
+credits: https://www.youtube.com/watch?v=APOPm01BVrk
